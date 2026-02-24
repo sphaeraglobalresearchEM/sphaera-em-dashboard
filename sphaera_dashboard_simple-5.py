@@ -760,7 +760,7 @@ st.markdown("""
             For informational purposes only. Not investment advice. Conduct your own due diligence.
         </p>
         <div style='margin-top: 15px;'>
-            <a href='https://substack.com/@sphaeraglobalresearch' target='_blank' style='color: #3B82F6; text-decoration: none; margin: 0 10px; font-size: 12px;'>
+            <a href='sphaeraglobal.substack.com' target='_blank' style='color: #3B82F6; text-decoration: none; margin: 0 10px; font-size: 12px;'>
                 📧 Substack
             </a>
             <span style='color: #4B5563;'>|</span>
@@ -768,7 +768,7 @@ st.markdown("""
                 🐦 Twitter
             </a>
             <span style='color: #4B5563;'>|</span>
-            <a href='https://linkedin.com/in/sphaera-global-research' target='_blank' style='color: #3B82F6; text-decoration: none; margin: 0 10px; font-size: 12px;'>
+            <a href='https://linkedin.com/company/sphaera-global-research' target='_blank' style='color: #3B82F6; text-decoration: none; margin: 0 10px; font-size: 12px;'>
                 💼 LinkedIn
             </a>
         </div>
