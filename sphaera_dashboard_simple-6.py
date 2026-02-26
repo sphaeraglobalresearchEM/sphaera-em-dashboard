@@ -147,14 +147,19 @@ def get_price_change(ticker, days=30):
         if data.empty or len(data) < 2:
             return 0.0
         
-        current = float(data['Close'].iloc[-1])
-        past = float(data['Close'].iloc[min(-days-1, -len(data))])
-        
-        change = ((current / past) - 1) * 100
-        return round(change, 2)
-    except:
-        return 0.0
+# Get 2 months of data to ensure enough trading days
+data = yf.download(ticker, period='2mo', progress=False)
 
+# Current price
+current = float(data['Close'].iloc[-1])
+
+# Price from 30 trading days ago
+lookback_index = min(30, len(data) - 1)
+past = float(data['Close'].iloc[-lookback_index - 1])
+
+# Calculate change
+change = ((current / past) - 1) * 100
+```
 @st.cache_data(ttl=300, show_spinner=False)
 def get_current_price(ticker):
     """Get current price"""
