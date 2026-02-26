@@ -93,9 +93,8 @@ PREVIOUS_YIELDS = {
     'Brazil': 12.3, 'Mexico': 9.9, 'Argentina': 27.8, 'Chile': 5.9, 'Colombia': 10.0,
     'China': 2.2, 'India': 7.0, 'Indonesia': 6.9, 'Thailand': 2.7, 'Vietnam': 3.4,
     'Philippines': 6.3, 'Malaysia': 3.9, 'Taiwan': 1.4, 'Japan': 1.1,
-    'South Africa': 10.0, 'Turkey': 25.2, 'Poland': 6.0, 'UAE': 4.1, 'Saudi Arabia': 4.7,
-    'Ghana': 27.5, 'Zambia': 22.0, 'Morocco': 3.4, "Cote d'Ivoire": 6.7,
-    'Nigeria': 18.0, 'Egypt': 24.5, 'Kenya': 16.2
+    'South Africa': 10.0, 'Turkey': 25.2, 'Poland': 6.0, 'UAE': 4.1, 'Saudi Arabia': 4.7, 'Hungary': 6.6,
+    'Morocco': 3.4, "Cote d'Ivoire": 6.7, 'Nigeria': 18.0, 'Egypt': 24.5
 }
 
 EM_MARKETS = {
@@ -123,15 +122,13 @@ EM_MARKETS = {
     'Poland': {'index': 'EPOL', 'currency': 'PLN=X', 'yield_10y': 5.9, 'policy_rate': 5.75, 'inflation': 4.7, 'flag': '🇵🇱'},
     'UAE': {'index': 'UAE', 'currency': 'AED=X', 'yield_10y': 4.2, 'policy_rate': 5.40, 'inflation': 3.5, 'flag': '🇦🇪'},
     'Saudi Arabia': {'index': 'KSA', 'currency': 'SAR=X', 'yield_10y': 4.8, 'policy_rate': 5.50, 'inflation': 1.6, 'flag': '🇸🇦'},
+    'Hungary': {'index': 'N/A', 'currency': 'HUF=X', 'yield_10y': 6.5, 'policy_rate': 6.50, 'inflation': 3.7, 'flag': '🇭🇺'},
     
-    # Africa (Note: Some don't have ETFs, will show N/A for index)
-    'Ghana': {'index': 'N/A', 'currency': 'GHS=X', 'yield_10y': 28.0, 'policy_rate': 29.00, 'inflation': 23.2, 'flag': '🇬🇭'},
-    'Zambia': {'index': 'N/A', 'currency': 'ZMW=X', 'yield_10y': 22.5, 'policy_rate': 13.50, 'inflation': 13.8, 'flag': '🇿🇲'},
+    # Africa
     'Morocco': {'index': 'N/A', 'currency': 'MAD=X', 'yield_10y': 3.5, 'policy_rate': 3.00, 'inflation': 1.9, 'flag': '🇲🇦'},
     "Cote d'Ivoire": {'index': 'N/A', 'currency': 'XOF=X', 'yield_10y': 6.8, 'policy_rate': 3.50, 'inflation': 4.1, 'flag': '🇨🇮'},
-    'Nigeria': {'index': 'NGE', 'currency': 'NGN=X', 'yield_10y': 18.5, 'policy_rate': 27.25, 'inflation': 34.6, 'flag': '🇳🇬'},
-    'Egypt': {'index': 'EGPT', 'currency': 'EGP=X', 'yield_10y': 24.8, 'policy_rate': 27.25, 'inflation': 25.5, 'flag': '🇪🇬'},
-    'Kenya': {'index': 'N/A', 'currency': 'KES=X', 'yield_10y': 16.5, 'policy_rate': 12.75, 'inflation': 2.8, 'flag': '🇰🇪'},
+    'Nigeria': {'index': 'N/A', 'currency': 'NGN=X', 'yield_10y': 18.5, 'policy_rate': 27.25, 'inflation': 34.6, 'flag': '🇳🇬'},
+    'Egypt': {'index': 'N/A', 'currency': 'EGP=X', 'yield_10y': 24.8, 'policy_rate': 27.25, 'inflation': 25.5, 'flag': '🇪🇬'},
 }
 
 # ============================================================================
@@ -697,8 +694,8 @@ with st.sidebar:
     **Regions:**
     - Latin America: 5
     - Asia: 9 (incl. Taiwan & Japan)
-    - EMEA: 5
-    - Africa: 7
+    - EMEA: 6 (incl. Hungary)
+    - Africa: 4
     
     **Data Points:**
     - Equity Indices
@@ -732,9 +729,14 @@ with st.sidebar:
     
     Emerging Markets Intelligence
     
-    📧 sphaera.substack.com
+    **Connect:**
+    - 📧 [Substack](https://sphaera.substack.com)
+    - 🐦 [Twitter](https://twitter.com/lucasalonso)
+    - 💼 [LinkedIn](https://linkedin.com/in/lucasalonso)
     
-    *Built with Streamlit + yfinance*
+    **Creator:** Lucas Alonso
+    
+    *Built with Streamlit + yfinance + Python*
     """)
 
 # ============================================================================
@@ -760,15 +762,15 @@ st.markdown("""
             For informational purposes only. Not investment advice. Conduct your own due diligence.
         </p>
         <div style='margin-top: 15px;'>
-            <a href='https://sphaeraglobal.substack.com/?utm_campaign=profile_chips' target='_blank' style='color: #3B82F6; text-decoration: none; margin: 0 10px; font-size: 12px;'>
+            <a href='https://sphaera.substack.com' target='_blank' style='color: #3B82F6; text-decoration: none; margin: 0 10px; font-size: 12px;'>
                 📧 Substack
             </a>
             <span style='color: #4B5563;'>|</span>
-            <a href='https://twitter.com/sphaeraresearch' target='_blank' style='color: #3B82F6; text-decoration: none; margin: 0 10px; font-size: 12px;'>
+            <a href='https://twitter.com/lucasalonso' target='_blank' style='color: #3B82F6; text-decoration: none; margin: 0 10px; font-size: 12px;'>
                 🐦 Twitter
             </a>
             <span style='color: #4B5563;'>|</span>
-            <a href='https://linkedin.com/company/sphaera-global-research' target='_blank' style='color: #3B82F6; text-decoration: none; margin: 0 10px; font-size: 12px;'>
+            <a href='https://linkedin.com/in/lucasalonso' target='_blank' style='color: #3B82F6; text-decoration: none; margin: 0 10px; font-size: 12px;'>
                 💼 LinkedIn
             </a>
         </div>
@@ -776,7 +778,7 @@ st.markdown("""
             Built with Python • Streamlit • yfinance • Plotly
         </p>
         <p style='font-size: 10px; color: #4B5563; margin-top: 5px;'>
-            © 2026 SPHAERA Global Research
+            Created by Lucas Alonso • © 2026 SPHAERA Global Research
         </p>
     </div>
 """, unsafe_allow_html=True)
