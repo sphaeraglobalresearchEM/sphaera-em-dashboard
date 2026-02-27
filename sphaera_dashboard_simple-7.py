@@ -99,36 +99,37 @@ PREVIOUS_YIELDS = {
 
 EM_MARKETS = {
     # Latin America
-    'Brazil': {'index': 'EWZ', 'currency': 'BRL=X', 'yield_10y': 12.5, 'policy_rate': 10.75, 'inflation': 4.5, 'flag': '🇧🇷'},
-    'Mexico': {'index': 'EWW', 'currency': 'MXN=X', 'yield_10y': 9.8, 'policy_rate': 10.25, 'inflation': 4.3, 'flag': '🇲🇽'},
-    'Argentina': {'index': 'ARGT', 'currency': 'ARS=X', 'yield_10y': 28.5, 'policy_rate': 40.00, 'inflation': 211.4, 'flag': '🇦🇷'},
-    'Chile': {'index': 'ECH', 'currency': 'CLP=X', 'yield_10y': 5.8, 'policy_rate': 5.75, 'inflation': 4.2, 'flag': '🇨🇱'},
-    'Colombia': {'index': 'GXG', 'currency': 'COP=X', 'yield_10y': 10.2, 'policy_rate': 10.75, 'inflation': 5.8, 'flag': '🇨🇴'},
+    'Brazil': {'index': 'EWZ', 'currency': 'BRL=X', 'yield_10y': 13.5, 'policy_rate': 15.00, 'inflation': 4.4, 'flag': '🇧🇷'},
+    'Mexico': {'index': 'EWW', 'currency': 'MXN=X', 'yield_10y': 8.8, 'policy_rate': 7.00, 'inflation': 3.8, 'flag': '🇲🇽'},
+    'Argentina': {'index': 'ARGT', 'currency': 'ARS=X', 'yield_10y': 28.5, 'policy_rate': 29.00, 'inflation': 32.4, 'flag': '🇦🇷'},
+    'Chile': {'index': 'ECH', 'currency': 'CLP=X', 'yield_10y': 5.3, 'policy_rate': 4.50, 'inflation': 2.8, 'flag': '🇨🇱'},
+    'Colombia': {'index': 'GXG', 'currency': 'COP=X', 'yield_10y': 13.5, 'policy_rate': 10.25, 'inflation': 5.35, 'flag': '🇨🇴'},
     
     # Asia
-    'China': {'index': 'FXI', 'currency': 'CNY=X', 'yield_10y': 2.3, 'policy_rate': 3.10, 'inflation': 0.7, 'flag': '🇨🇳'},
-    'India': {'index': 'EPI', 'currency': 'INR=X', 'yield_10y': 7.1, 'policy_rate': 6.50, 'inflation': 5.2, 'flag': '🇮🇳'},
-    'Indonesia': {'index': 'EIDO', 'currency': 'IDR=X', 'yield_10y': 6.8, 'policy_rate': 6.00, 'inflation': 1.8, 'flag': '🇮🇩'},
-    'Thailand': {'index': 'THD', 'currency': 'THB=X', 'yield_10y': 2.8, 'policy_rate': 2.50, 'inflation': 0.4, 'flag': '🇹🇭'},
-    'Vietnam': {'index': 'VNM', 'currency': 'VND=X', 'yield_10y': 3.5, 'policy_rate': 4.50, 'inflation': 3.8, 'flag': '🇻🇳'},
-    'Philippines': {'index': 'EPHE', 'currency': 'PHP=X', 'yield_10y': 6.2, 'policy_rate': 6.00, 'inflation': 2.9, 'flag': '🇵🇭'},
-    'Malaysia': {'index': 'EWM', 'currency': 'MYR=X', 'yield_10y': 3.8, 'policy_rate': 3.00, 'inflation': 1.5, 'flag': '🇲🇾'},
-    'Taiwan': {'index': 'EWT', 'currency': 'TWD=X', 'yield_10y': 1.5, 'policy_rate': 2.00, 'inflation': 2.3, 'flag': '🇹🇼'},
-    'Japan': {'index': 'EWJ', 'currency': 'JPY=X', 'yield_10y': 1.2, 'policy_rate': 0.25, 'inflation': 2.8, 'flag': '🇯🇵'},
+    'China': {'index': 'FXI', 'currency': 'CNY=X', 'yield_10y': 1.8, 'policy_rate': 3.00, 'inflation': 0.2, 'flag': '🇨🇳'},
+    'India': {'index': 'EPI', 'currency': 'INR=X', 'yield_10y': 6.7, 'policy_rate': 5.25, 'inflation': 2.75, 'flag': '🇮🇳'},
+    'Indonesia': {'index': 'EIDO', 'currency': 'IDR=X', 'yield_10y': 6.4, 'policy_rate': 4.75, 'inflation': 3.55, 'flag': '🇮🇩'},
+    'Thailand': {'index': 'THD', 'currency': 'THB=X', 'yield_10y': 1.6, 'policy_rate': 1.00, 'inflation': -0.66, 'flag': '🇹🇭'},
+    'South Korea': {'index': 'EWY', 'currency': 'KRW=X', 'yield_10y': 3.4, 'policy_rate': 2.50, 'inflation': 2.0, 'flag': '🇰🇷'},
+    'Vietnam': {'index': 'VNM', 'currency': 'VND=X', 'yield_10y': 4.2, 'policy_rate': 4.50, 'inflation': 2.53, 'flag': '🇻🇳'},
+    'Philippines': {'index': 'EPHE', 'currency': 'PHP=X', 'yield_10y': 5.9, 'policy_rate': 4.25, 'inflation': 2.00, 'flag': '🇵🇭'},
+    'Malaysia': {'index': 'EWM', 'currency': 'MYR=X', 'yield_10y': 3.5, 'policy_rate': 2.75, 'inflation': 1.6, 'flag': '🇲🇾'},
+    'Taiwan': {'index': 'EWT', 'currency': 'TWD=X', 'yield_10y': 1.4, 'policy_rate': 2.00, 'inflation': 0.69, 'flag': '🇹🇼'},
+    'Japan': {'index': 'EWJ', 'currency': 'JPY=X', 'yield_10y': 2.1, 'policy_rate': 0.75, 'inflation': 1.5, 'flag': '🇯🇵'},
     
     # EMEA
-    'South Africa': {'index': 'EZA', 'currency': 'ZAR=X', 'yield_10y': 10.2, 'policy_rate': 8.25, 'inflation': 5.3, 'flag': '🇿🇦'},
-    'Turkey': {'index': 'TUR', 'currency': 'TRY=X', 'yield_10y': 24.5, 'policy_rate': 50.00, 'inflation': 64.8, 'flag': '🇹🇷'},
-    'Poland': {'index': 'EPOL', 'currency': 'PLN=X', 'yield_10y': 5.9, 'policy_rate': 5.75, 'inflation': 4.7, 'flag': '🇵🇱'},
-    'UAE': {'index': 'UAE', 'currency': 'AED=X', 'yield_10y': 4.2, 'policy_rate': 5.40, 'inflation': 3.5, 'flag': '🇦🇪'},
-    'Saudi Arabia': {'index': 'KSA', 'currency': 'SAR=X', 'yield_10y': 4.8, 'policy_rate': 5.50, 'inflation': 1.6, 'flag': '🇸🇦'},
-    'Hungary': {'index': 'N/A', 'currency': 'HUF=X', 'yield_10y': 6.5, 'policy_rate': 6.50, 'inflation': 3.7, 'flag': '🇭🇺'},
+    'Turkey': {'index': 'TUR', 'currency': 'TRY=X', 'yield_10y': 30.2, 'policy_rate': 37.00, 'inflation': 30.65, 'flag': '🇹🇷'},
+    'Poland': {'index': 'EPOL', 'currency': 'PLN=X', 'yield_10y': 5.0, 'policy_rate': 4.00, 'inflation': 2.2, 'flag': '🇵🇱'},
+    'UAE': {'index': 'UAE', 'currency': 'AED=X', 'yield_10y': 4.2, 'policy_rate': 3.65, 'inflation': 2.17, 'flag': '🇦🇪'},
+    'Saudi Arabia': {'index': 'KSA', 'currency': 'SAR=X', 'yield_10y': 4.8, 'policy_rate': 4.25, 'inflation': 1.8, 'flag': '🇸🇦'},
+    'Hungary': {'index': 'N/A', 'currency': 'HUF=X', 'yield_10y': 6.5, 'policy_rate': 6.25, 'inflation': 2.1, 'flag': '🇭🇺'},
     
     # Africa
-    'Morocco': {'index': 'N/A', 'currency': 'MAD=X', 'yield_10y': 3.5, 'policy_rate': 3.00, 'inflation': 1.9, 'flag': '🇲🇦'},
-    "Cote d'Ivoire": {'index': 'N/A', 'currency': 'XOF=X', 'yield_10y': 6.8, 'policy_rate': 3.50, 'inflation': 4.1, 'flag': '🇨🇮'},
-    'Nigeria': {'index': 'N/A', 'currency': 'NGN=X', 'yield_10y': 18.5, 'policy_rate': 27.25, 'inflation': 34.6, 'flag': '🇳🇬'},
-    'Egypt': {'index': 'N/A', 'currency': 'EGP=X', 'yield_10y': 24.8, 'policy_rate': 27.25, 'inflation': 25.5, 'flag': '🇪🇬'},
+    'South Africa': {'index': 'EZA', 'currency': 'ZAR=X', 'yield_10y': 7.9, 'policy_rate': 6.75, 'inflation': 3.5, 'flag': '🇿🇦'},
+    'Morocco': {'index': 'N/A', 'currency': 'MAD=X', 'yield_10y': 3.0, 'policy_rate': 2.25, 'inflation': -0.8, 'flag': '🇲🇦'},
+    "Cote d'Ivoire": {'index': 'N/A', 'currency': 'XOF=X', 'yield_10y': 7.8, 'policy_rate': 5.25, 'inflation': 0.3, 'flag': '🇨🇮'},
+    'Nigeria': {'index': 'N/A', 'currency': 'NGN=X', 'yield_10y': 15.5, 'policy_rate': 26.5, 'inflation': 15.1, 'flag': '🇳🇬'},
+    'Egypt': {'index': 'N/A', 'currency': 'EGP=X', 'yield_10y': 20.0, 'policy_rate': 19.0, 'inflation': 11.9, 'flag': '🇪🇬'},
 }
 
 # ============================================================================
