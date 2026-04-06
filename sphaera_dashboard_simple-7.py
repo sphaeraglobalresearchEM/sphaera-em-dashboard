@@ -403,11 +403,11 @@ if display_cols:
     
     # Color yield changes (RED = rising, GREEN = falling)
     if 'Yield Δ' in display_cols:
-        styled_df = styled_df.applymap(color_yield_change, subset=['Yield Δ'])
+        styled_df = styled_df.map(color_yield_change, subset=['Yield Δ'])
     
     # Color real rates (RED = negative/loose, GREEN = positive/tight)
     if 'Real Rate' in display_cols:
-        styled_df = styled_df.applymap(color_real_rate, subset=['Real Rate'])
+        styled_df = styled_df.map(color_real_rate, subset=['Real Rate'])
     
     if format_dict:
         styled_df = styled_df.format(format_dict)
