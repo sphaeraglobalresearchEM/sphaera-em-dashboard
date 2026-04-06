@@ -399,7 +399,7 @@ if display_cols:
     # Color performance columns (green = good, red = bad)
     perf_cols = [col for col in ['1M %', '3M %', 'YTD %', 'FX 1M %'] if col in display_cols]
     if perf_cols:
-        styled_df = styled_df.applymap(color_cells, subset=perf_cols)
+        styled_df = styled_df.map(color_cells, subset=perf_cols)
     
     # Color yield changes (RED = rising, GREEN = falling)
     if 'Yield Δ' in display_cols:
