@@ -83,10 +83,6 @@ st.markdown("---")
 # DATA CONFIGURATION - EXPANDED LIST
 # ============================================================================
 
-# ============================================================================
-# DATA CONFIGURATION - EXPANDED LIST
-# ============================================================================
-
 # Store previous month's yields for change tracking
 # Update these manually each month when you update current yields
 PREVIOUS_YIELDS = {
@@ -94,7 +90,7 @@ PREVIOUS_YIELDS = {
     'China': 2.2, 'India': 7.0, 'Indonesia': 6.9, 'Thailand': 2.7, 'Vietnam': 3.4,
     'Philippines': 6.3, 'Malaysia': 3.9, 'Taiwan': 1.4, 'Japan': 1.1,
     'South Africa': 10.0, 'Turkey': 25.2, 'Poland': 6.0, 'UAE': 4.1, 'Saudi Arabia': 4.7, 'Hungary': 6.6,
-    'Morocco': 3.4, "Cote d'Ivoire": 6.7, 'Nigeria': 18.0, 'Egypt': 24.5
+    'Morocco': 3.4, "Cote d'Ivoire": 6.7, 'Nigeria': 18.0, 'Egypt': 24.5, 'South Korea': 3.4
 }
 
 EM_MARKETS = {
@@ -103,37 +99,37 @@ EM_MARKETS = {
     'Mexico': {'index': 'EWW', 'currency': 'MXN=X', 'yield_10y': 8.8, 'policy_rate': 7.00, 'inflation': 3.8, 'flag': '🇲🇽'},
     'Argentina': {'index': 'ARGT', 'currency': 'ARS=X', 'yield_10y': 28.5, 'policy_rate': 29.00, 'inflation': 32.4, 'flag': '🇦🇷'},
     'Chile': {'index': 'ECH', 'currency': 'CLP=X', 'yield_10y': 5.3, 'policy_rate': 4.50, 'inflation': 2.8, 'flag': '🇨🇱'},
-    'Colombia': {'index': 'GXG', 'currency': 'COP=X', 'yield_10y': 13.5, 'policy_rate': 10.25, 'inflation': 5.35, 'flag': '🇨🇴'},
+    'Colombia': {'index': 'GXG', 'currency': 'COP=X', 'yield_10y': 13.5, 'policy_rate': 10.25, 'inflation': 5.3, 'flag': '🇨🇴'},
     
     # Asia
     'China': {'index': 'FXI', 'currency': 'CNY=X', 'yield_10y': 1.8, 'policy_rate': 3.00, 'inflation': 0.2, 'flag': '🇨🇳'},
-    'India': {'index': 'EPI', 'currency': 'INR=X', 'yield_10y': 6.7, 'policy_rate': 5.25, 'inflation': 2.75, 'flag': '🇮🇳'},
-    'Indonesia': {'index': 'EIDO', 'currency': 'IDR=X', 'yield_10y': 6.4, 'policy_rate': 4.75, 'inflation': 3.55, 'flag': '🇮🇩'},
-    'Thailand': {'index': 'THD', 'currency': 'THB=X', 'yield_10y': 1.6, 'policy_rate': 1.00, 'inflation': -0.66, 'flag': '🇹🇭'},
+    'India': {'index': 'EPI', 'currency': 'INR=X', 'yield_10y': 6.7, 'policy_rate': 5.25, 'inflation': 2.8, 'flag': '🇮🇳'},
+    'Indonesia': {'index': 'EIDO', 'currency': 'IDR=X', 'yield_10y': 6.4, 'policy_rate': 4.75, 'inflation': 3.5, 'flag': '🇮🇩'},
+    'Thailand': {'index': 'THD', 'currency': 'THB=X', 'yield_10y': 1.6, 'policy_rate': 1.00, 'inflation': -0.7, 'flag': '🇹🇭'},
     'South Korea': {'index': 'EWY', 'currency': 'KRW=X', 'yield_10y': 3.4, 'policy_rate': 2.50, 'inflation': 2.0, 'flag': '🇰🇷'},
-    'Vietnam': {'index': 'VNM', 'currency': 'VND=X', 'yield_10y': 4.2, 'policy_rate': 4.50, 'inflation': 2.53, 'flag': '🇻🇳'},
-    'Philippines': {'index': 'EPHE', 'currency': 'PHP=X', 'yield_10y': 5.9, 'policy_rate': 4.25, 'inflation': 2.00, 'flag': '🇵🇭'},
+    'Vietnam': {'index': 'VNM', 'currency': 'VND=X', 'yield_10y': 4.2, 'policy_rate': 4.50, 'inflation': 2.5, 'flag': '🇻🇳'},
+    'Philippines': {'index': 'EPHE', 'currency': 'PHP=X', 'yield_10y': 5.9, 'policy_rate': 4.25, 'inflation': 2.0, 'flag': '🇵🇭'},
     'Malaysia': {'index': 'EWM', 'currency': 'MYR=X', 'yield_10y': 3.5, 'policy_rate': 2.75, 'inflation': 1.6, 'flag': '🇲🇾'},
-    'Taiwan': {'index': 'EWT', 'currency': 'TWD=X', 'yield_10y': 1.4, 'policy_rate': 2.00, 'inflation': 0.69, 'flag': '🇹🇼'},
+    'Taiwan': {'index': 'EWT', 'currency': 'TWD=X', 'yield_10y': 1.4, 'policy_rate': 2.00, 'inflation': 0.7, 'flag': '🇹🇼'},
     'Japan': {'index': 'EWJ', 'currency': 'JPY=X', 'yield_10y': 2.1, 'policy_rate': 0.75, 'inflation': 1.5, 'flag': '🇯🇵'},
     
     # EMEA
     'Turkey': {'index': 'TUR', 'currency': 'TRY=X', 'yield_10y': 30.2, 'policy_rate': 37.00, 'inflation': 30.65, 'flag': '🇹🇷'},
-    'Poland': {'index': 'EPOL', 'currency': 'PLN=X', 'yield_10y': 5.0, 'policy_rate': 4.00, 'inflation': 2.2, 'flag': '🇵🇱'},
+    'Poland': {'index': 'EPOL', 'currency': 'PLN=X', 'yield_10y': 5.0, 'policy_rate': 3.75, 'inflation': 3.0, 'flag': '🇵🇱'},
     'UAE': {'index': 'UAE', 'currency': 'AED=X', 'yield_10y': 4.2, 'policy_rate': 3.65, 'inflation': 2.17, 'flag': '🇦🇪'},
-    'Saudi Arabia': {'index': 'KSA', 'currency': 'SAR=X', 'yield_10y': 4.8, 'policy_rate': 4.25, 'inflation': 1.8, 'flag': '🇸🇦'},
-    'Hungary': {'index': 'N/A', 'currency': 'HUF=X', 'yield_10y': 6.5, 'policy_rate': 6.25, 'inflation': 2.1, 'flag': '🇭🇺'},
+    'Saudi Arabia': {'index': 'KSA', 'currency': 'SAR=X', 'yield_10y': 4.8, 'policy_rate': 4.25, 'inflation': 1.7, 'flag': '🇸🇦'},
+    'Hungary': {'index': 'N/A', 'currency': 'HUF=X', 'yield_10y': 6.5, 'policy_rate': 6.25, 'inflation': 1.4, 'flag': '🇭🇺'},
     
     # Africa
-    'South Africa': {'index': 'EZA', 'currency': 'ZAR=X', 'yield_10y': 7.9, 'policy_rate': 6.75, 'inflation': 3.5, 'flag': '🇿🇦'},
-    'Morocco': {'index': 'N/A', 'currency': 'MAD=X', 'yield_10y': 3.0, 'policy_rate': 2.25, 'inflation': -0.8, 'flag': '🇲🇦'},
-    "Cote d'Ivoire": {'index': 'N/A', 'currency': 'XOF=X', 'yield_10y': 7.8, 'policy_rate': 5.25, 'inflation': 0.3, 'flag': '🇨🇮'},
+    'South Africa': {'index': 'EZA', 'currency': 'ZAR=X', 'yield_10y': 7.9, 'policy_rate': 6.75, 'inflation': 3.0, 'flag': '🇿🇦'},
+    'Morocco': {'index': 'N/A', 'currency': 'MAD=X', 'yield_10y': 3.0, 'policy_rate': 2.25, 'inflation': -0.6, 'flag': '🇲🇦'},
+    "Cote d'Ivoire": {'index': 'N/A', 'currency': 'XOF=X', 'yield_10y': 7.8, 'policy_rate': 3.25, 'inflation': 0.3, 'flag': '🇨🇮'},
     'Nigeria': {'index': 'N/A', 'currency': 'NGN=X', 'yield_10y': 15.5, 'policy_rate': 26.5, 'inflation': 15.1, 'flag': '🇳🇬'},
-    'Egypt': {'index': 'N/A', 'currency': 'EGP=X', 'yield_10y': 20.0, 'policy_rate': 19.0, 'inflation': 11.9, 'flag': '🇪🇬'},
+    'Egypt': {'index': 'N/A', 'currency': 'EGP=X', 'yield_10y': 20.0, 'policy_rate': 19.0, 'inflation': 13.4, 'flag': '🇪🇬'},
 }
 
 # ============================================================================
-# SIMPLE DATA FETCH FUNCTION
+# SIMPLE DATA FETCH FUNCTION - FIXED VERSION
 # ============================================================================
 
 @st.cache_data(ttl=300, show_spinner=False)
@@ -143,8 +139,9 @@ def get_price_change(ticker, days=30):
         if ticker == 'N/A':
             return 0.0
         
-        # Get more data to ensure we have enough trading days
-        data = yf.download(ticker, period='2mo', progress=False)
+        # Use Ticker().history() instead of download()
+        stock = yf.Ticker(ticker)
+        data = stock.history(period='2mo')
         
         if data.empty or len(data) < 2:
             return 0.0
@@ -152,15 +149,15 @@ def get_price_change(ticker, days=30):
         # Current price (most recent close)
         current = float(data['Close'].iloc[-1])
         
-        # Price from ~30 trading days ago (or earliest available)
-        # Most markets have ~22 trading days per month, so -30 is safe
+        # Price from ~30 trading days ago
         lookback_index = min(30, len(data) - 1)
         past = float(data['Close'].iloc[-lookback_index - 1])
         
         # Calculate percentage change
         change = ((current / past) - 1) * 100
         return round(change, 2)
-    except:
+    except Exception as e:
+        # Silent failure - returns 0
         return 0.0
 
 @st.cache_data(ttl=300, show_spinner=False)
@@ -170,7 +167,8 @@ def get_current_price(ticker):
         if ticker == 'N/A':
             return 'N/A'
         
-        data = yf.download(ticker, period='5d', progress=False)
+        stock = yf.Ticker(ticker)
+        data = stock.history(period='5d')
         
         if data.empty:
             return 'N/A'
@@ -186,8 +184,9 @@ def get_ytd_performance(ticker):
         if ticker == 'N/A':
             return 0.0
         
-        # Download data from Jan 1 of current year
-        data = yf.download(ticker, period='1y', progress=False)
+        # Use Ticker().history()
+        stock = yf.Ticker(ticker)
+        data = stock.history(period='1y')
         
         if data.empty or len(data) < 2:
             return 0.0
@@ -255,7 +254,7 @@ for idx, (country, info) in enumerate(EM_MARKETS.items()):
         'Term Premium': round(current_yield - info['policy_rate'], 1)
     })
     
-    time.sleep(0.1)  # Small delay to avoid rate limits
+    time.sleep(0.05)  # Small delay to avoid rate limits
 
 progress_bar.empty()
 status_text.empty()
@@ -683,110 +682,4 @@ with st.sidebar:
             </div>
         """, unsafe_allow_html=True)
     else:
-        st.markdown("## 🌍 SPHAERA Dashboard")
-    
-    st.markdown("---")
-    
-    st.markdown("### ⚙️ Controls")
-    
-    if st.button("🔄 Refresh All Data", use_container_width=True):
-        st.cache_data.clear()
-        st.rerun()
-    
-    st.markdown("---")
-    
-    st.markdown("### 📊 Coverage")
-    st.markdown(f"""
-    **Total Countries:** {len(EM_MARKETS)}
-    
-    **Regions:**
-    - Latin America: 5
-    - Asia: 9 (incl. Taiwan & Japan)
-    - EMEA: 6 (incl. Hungary)
-    - Africa: 4
-    
-    **Data Points:**
-    - Equity Indices
-    - FX Rates (vs USD)
-    - 10-Year Yields
-    - Yield Changes (1M)
-    - Policy Rates
-    - Term Premiums
-    """)
-    
-    st.markdown("---")
-    
-    st.markdown("### 📝 Data Updates")
-    st.markdown("""
-    **Automatic (Real-time):**
-    - Index prices
-    - FX rates
-    
-    **Manual (Weekly):**
-    - 10Y yields
-    - Policy rates
-    
-    **Refresh:** Every 5 minutes
-    """)
-    
-    st.markdown("---")
-    
-    st.markdown("### ℹ️ About")
-    st.markdown("""
-    **SPHAERA Global Research**
-    
-    Emerging Markets Intelligence
-    
-    **Connect:**
-    - 📧 [Substack](https://sphaera.substack.com)
-    - 🐦 [Twitter](https://twitter.com/lucasalonso)
-    - 💼 [LinkedIn](https://linkedin.com/in/lucasalonso)
-    
-    **Creator:** Lucas Alonso
-    
-    *Built with Streamlit + yfinance + Python*
-    """)
-
-# ============================================================================
-# FOOTER
-# ============================================================================
-
-st.markdown("---")
-st.markdown("""
-    <div style='text-align: center; padding: 30px 20px; background: linear-gradient(135deg, #1a1d29 0%, #0e1117 100%); border-radius: 8px; margin-top: 40px;'>
-        <p style='font-size: 18px; color: #60A5FA; font-weight: 600; margin-bottom: 8px; letter-spacing: 1px;'>
-            SPHAERA GLOBAL RESEARCH
-        </p>
-        <p style='font-size: 14px; color: #9CA3AF; margin-bottom: 15px;'>
-            Emerging Markets Intelligence
-        </p>
-        <p style='font-size: 12px; color: #6B7280; margin-bottom: 5px;'>
-            Data Sources: Yahoo Finance (real-time) • Central Banks • Investing.com
-        </p>
-        <p style='font-size: 12px; color: #6B7280; margin-bottom: 20px;'>
-            Updates: Every 5 minutes (indices, FX) • Weekly (yields, rates)
-        </p>
-        <p style='font-size: 11px; color: #6B7280; font-style: italic; margin-bottom: 15px;'>
-            For informational purposes only. Not investment advice. Conduct your own due diligence.
-        </p>
-        <div style='margin-top: 15px;'>
-            <a href='https://sphaera.substack.com' target='_blank' style='color: #3B82F6; text-decoration: none; margin: 0 10px; font-size: 12px;'>
-                📧 Substack
-            </a>
-            <span style='color: #4B5563;'>|</span>
-            <a href='https://twitter.com/lucasalonso' target='_blank' style='color: #3B82F6; text-decoration: none; margin: 0 10px; font-size: 12px;'>
-                🐦 Twitter
-            </a>
-            <span style='color: #4B5563;'>|</span>
-            <a href='https://linkedin.com/in/lucasalonso' target='_blank' style='color: #3B82F6; text-decoration: none; margin: 0 10px; font-size: 12px;'>
-                💼 LinkedIn
-            </a>
-        </div>
-        <p style='font-size: 10px; color: #4B5563; margin-top: 20px;'>
-            Built with Python • Streamlit • yfinance • Plotly
-        </p>
-        <p style='font-size: 10px; color: #4B5563; margin-top: 5px;'>
-            Created by Lucas Alonso • © 2026 SPHAERA Global Research
-        </p>
-    </div>
-""", unsafe_allow_html=True)
+        st.markdown("
